@@ -99,3 +99,9 @@ heap.c:43:5: error: ‘aux_d’ undeclared (first use in this function); did you
 heap.c:43:5: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 2d67fbd
+Fri May  6 16:17:01 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  4|3
+total_score: 25/70
+a8d2283
