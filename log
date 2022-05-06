@@ -17,3 +17,17 @@ Fri May  6 15:46:00 UTC 2022:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 3d83bf8
+Fri May  6 15:47:34 UTC 2022: 
+ heap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_top’:
+heap.c:22:3: error: expected ‘(’ before ‘return’
+   return pq->heapArray[0].data;
+   ^~~~~~
+heap.c:23:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+ee95ed7

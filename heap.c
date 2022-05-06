@@ -18,6 +18,7 @@ typedef struct Heap{
 
 
 void* heap_top(Heap* pq){
+  if
   return pq->heapArray[0].data;
 }
 
@@ -34,7 +35,7 @@ void heap_pop(Heap* pq){
 
 Heap* createHeap(){
   Heap * new = (Heap *)malloc(sizeof(Heap));
-  new->heapArray = (heapElem *)malloc(sizeof(heapElem));
+  new->heapArray = (heapElem *)malloc(3*sizeof(heapElem));
   new->capac = 3;
   new->size = 0;
   return new;
