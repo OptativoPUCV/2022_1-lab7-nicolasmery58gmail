@@ -29,7 +29,7 @@ void* heap_top(Heap* pq){
 
 void heap_push(Heap* pq, void* data, int priority){
   if(pq->size == pq->capac){
-    pq->heapArray = realloc(pq->heapArray, 2*heap->capac + 1);
+    pq->heapArray = realloc(pq->heapArray, (heap->capac*2 + 1)*sizeof(heapElem));
   }
   int ext = pq->size;
   int aux_p;

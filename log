@@ -63,3 +63,23 @@ heap.c:43:5: error: ‘aux_d’ undeclared (first use in this function); did you
      aux_p
 Compilation failed
 802dfe2
+Fri May  6 16:15:59 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_push’:
+heap.c:32:45: error: ‘heap’ undeclared (first use in this function); did you mean ‘Heap’?
+     pq->heapArray = realloc(pq->heapArray, (heap->capac*2 + 1)*sizeof(heapElem));
+                                             ^~~~
+                                             Heap
+heap.c:32:45: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:36:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+   void * aux_d:
+               ^
+heap.c:36:15: error: expected expression before ‘:’ token
+heap.c:43:5: error: ‘aux_d’ undeclared (first use in this function); did you mean ‘aux_p’?
+     aux_d = pq->heapArray[(ext-1)/2].data;
+     ^~~~~
+     aux_p
+Compilation failed
+a9b90d7
