@@ -51,7 +51,41 @@ void heap_push(Heap* pq, void* data, int priority){
 
 
 void heap_pop(Heap* pq){
+  int aux;
+  void * dat;
 
+  aux = pq->heapArray[0].priority;
+  pq->heapArray[0].priority = pq->heapArray[pq->size-1].priority;
+  pq->heapArray[pq->size-1].priority = aux;
+  dat = pq->heapArray[0].data;
+  pq->heapArray[0].data = pq->heapArray[pq->size-1].data;
+  pq->heapArray[pq->size-1].data = dat;
+  pq->size -= 1;
+
+  int place = 0;
+  int leaf;
+  while (2*place+1 < pq->size){
+    leaf = 0;
+    if(2*place+2 == pq->size){
+      leaf = 2*place+1;
+    }else{
+      if(pq->heapArray[2*place+1].priority > pq->heapArray[2*place+2].priority){
+        leaf = 2*place+1;
+      }else{
+        leaf = 2*place+2;
+      }
+    }
+    if (pq->heapArray[place].priority < pq->heapArray[leaf].priority){
+      int change = pq->heapArray[place].priority;
+      pq->heapArray[place].priority = pq->heapArray[leaf].priority;
+      pq->heapArray[leaf].priority = change;
+      void * aux2 = pq->heapArray[place].data;
+      pq->heapArray[place].data = pq->heapArray[leaf].data;
+      pq->heapArray[leaf].data = dat;
+    }else{
+      break;
+    }
+  }
 }
 
 Heap* createHeap(){

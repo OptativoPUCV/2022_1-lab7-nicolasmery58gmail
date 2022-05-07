@@ -135,3 +135,14 @@ Fri May  6 16:26:55 UTC 2022:
  tests:  7|1
 total_score: 45/70
 552af97
+Sat May  7 00:32:49 UTC 2022: 
+ heap.c | 34 ++++++++++++++++++++++++++++++++++
+ 1 file changed, 34 insertions(+)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_pop’:
+heap.c:82:14: error: unused variable ‘aux2’ [-Werror=unused-variable]
+       void * aux2 = pq->heapArray[place].data;
+              ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+88331b1
