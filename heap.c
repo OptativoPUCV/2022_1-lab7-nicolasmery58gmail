@@ -81,7 +81,7 @@ void heap_pop(Heap* pq){
       pq->heapArray[leaf].priority = change;
       void * aux2 = pq->heapArray[place].data;
       pq->heapArray[place].data = pq->heapArray[leaf].data;
-      pq->heapArray[leaf].data = dat;
+      pq->heapArray[leaf].data = aux2;
     }else{
       break;
     }

@@ -146,3 +146,9 @@ heap.c:82:14: error: unused variable ‘aux2’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 88331b1
+Sat May  7 00:33:14 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  8|0
+total_score: 70/70
+d8573d3
